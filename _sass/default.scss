@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./mixins";
+
+header {
+  @include display-flex();
+
+  background: $color-primary;
+  color: #FAFAFA;
+}

@@ -1,0 +1,11 @@
+@import "variables";
+@import "default";
+
+html {
+  font-family: $font-family;
+}
+
+body, main, figure {
+  margin: $null;
+  padding: $null;
+}

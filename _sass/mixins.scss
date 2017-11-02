@@ -1,0 +1,12 @@
+/**
+ * Mixins
+ *
+ * Helper mixins to allow cross-browser compatibility, as
+ * well as support older browsers
+ */
+
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
