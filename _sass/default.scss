@@ -1,9 +1,77 @@
-@import "./variables";
+@import "./default/variables";
 @import "./mixins";
 
-header {
-  @include display-flex();
+@import "./default/header";
+@import "./default/nav";
+@import "./default/main";
+@import "./default/footer";
 
-  background: $color-primary;
-  color: #FAFAFA;
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.flex-container {
+  @include display-flex();
+}
+
+.flex-column {
+  @include flex-direction(column);
+}
+
+.flex-half {
+  width: 50%;
+  flex-basis: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-column {
+    @include flex-direction(column);
+
+    .flex-half {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  width: max-content;
+
+  h1 {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: serif;
+    border-bottom: 1px solid $color-primary-light;
+  }
+
+  h6 {
+    font-size: 14px;
+    font-weight: 400;
+    font-family: serif;
+  }
+
+  h1, h6 {
+    @include pad(0, 0);
+    margin: 0;
+  }
+}
+
+button {
+  @include pad($pad-med, $pad-med);
+
+  background: $color-secondary;
+  border: $null;
+  border-radius: 4px;
+  box-shadow: 0 0 1em rgba($color-primary-dark, 0.3);
+  color: $white;
+  cursor: pointer;
+  outline: none;
+  text-transform: uppercase;
+  transition: 0.2s linear;
+}
+
+button:hover {
+  background: $color-secondary-light;
+  box-shadow: 0 0 1em rgba($color-primary-dark, 0.5);
 }

@@ -12,8 +12,18 @@ $color-secondary-light: #512DA8;
 $color-secondary: #4527A0;
 $color-secondary-dark: #311B92;
 
+$white: #F5F5F5;
+
 // Font Family
 $font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif;
 
+// Lengths
+$pad-xsm: 4px;
+$pad-sm: 8px;
+$pad-med: 12px;
+$pad-lg: 18px;
+$pad-xlg: 24px;
+
 // Defaults
 $null: 0;
+$max-width: 1200px;

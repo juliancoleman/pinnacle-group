@@ -1,0 +1,35 @@
+main {
+  .container {
+    @include pad($pad-med, null);
+
+    #banner {
+      background-image: url("http://www.mindfulkidsandfamilies.com/wp-content/uploads/2017/09/family.jpg");
+      background-size: cover;
+      background-position: top center;
+      background-repeat: no-repeat;
+      height: 600px;
+      width: 100%;
+      position: relative;
+
+      #banner-overlay {
+        position: absolute;
+        height: 35%;
+        width: 100%;
+        bottom: 0;
+        background: rgba($white, 0.5);
+        transition: 0.2s linear;
+
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-direction(column);
+
+
+        h2 {
+          color: $white;
+          font-weight: 400;
+          text-shadow: 0 0 1em rgba($color-primary-dark, 0.3);
+        }
+      }
+    }
+  }
+}

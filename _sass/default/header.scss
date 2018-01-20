@@ -1,0 +1,24 @@
+header {
+  background: rgba($white, 0.5);
+  margin-bottom: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+
+  .flex-container {
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(flex-start);
+  }
+
+  .container {
+    @include pad($pad-med, $pad-med);
+
+    border-bottom: 5px solid $color-secondary;
+    color: $color-primary-light;
+  }
+}

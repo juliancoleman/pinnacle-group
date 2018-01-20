@@ -1,5 +1,30 @@
 <footer>
   <div class="container flex-container">
-
+    <section class="flex-container flex-column">
+      <div class="title">
+        <h1>{{ site.title }}</h1>
+        <h6>{{ site.subtitle }}</h6>
+      </div>
+      <div class="flex-container mobile-column">
+        <div class="flex-half">
+          <p>{{ site.agent }}</p>
+          <p>{{ site.location }}</p>
+          <p>{{ site.city }}, {{ site.state }} {{ site.zipCode }}</p>
+          <p>Phn: {{ site.phoneNumber }}</p>
+          <p>Fax: {{ site.faxNumber }}</p>
+          <p>{{ site.contactEmail }}</p>
+        </div>
+        <div class="flex-half">
+          <ul>
+            {% for post in site.posts %}
+              <li><a class="flex-container" href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div id="copyright">&copy; 2017 Julian Coleman - <a href="http://jcoleman.engineering">jcoleman.engineering</a></div>
+      </div>
+    </section>
   </div>
 </footer>

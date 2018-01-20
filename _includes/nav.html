@@ -1,0 +1,7 @@
+<nav>
+  <ul class="container flex-container">
+    {% for post in site.posts %}
+      <li><a class="flex-container" href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</nav>

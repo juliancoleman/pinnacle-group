@@ -1,0 +1,70 @@
+footer {
+  background: $color-secondary;
+  color: $white;
+
+  .container {
+    @include pad($pad-xlg, $pad-xlg);
+
+    background: $color-secondary-dark;
+
+    section {
+      width: 100%;
+
+      #copyright {
+        margin-top: 24px;
+        font-size: 14px;
+
+        a:hover {
+          color: $white;
+        }
+      }
+    }
+
+    .title + div.flex-container {
+      @include justify-content(flex-start);
+
+      margin-top: $pad-med;
+
+      p {
+        @include pad($pad-xsm, $null);
+
+        font-size: 14px;
+        font-weight: 400;
+        margin: $null;
+      }
+    }
+
+    ul {
+      border-left: 1px solid $white;
+    }
+
+    li {
+      &:first-of-type a {
+        margin-top: $null;
+      }
+
+      a {
+        margin: $pad-med $pad-xlg * 2;
+
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $white;
+        }
+
+        &::before {
+          content: "+";
+          margin-right: $pad-sm;
+          opacity: $null;
+          transition: 0.2s linear;
+        }
+
+        &:hover::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

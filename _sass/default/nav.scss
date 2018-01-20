@@ -1,0 +1,33 @@
+nav {
+  ul.flex-container {
+    @include flex-direction(row);
+    @include justify-content(flex-end);
+
+    & > li {
+      &:last-of-type a {
+        border-right: $null;
+      }
+
+      a {
+        @include pad($pad-sm, $pad-lg);
+
+        border-right: 1px solid #e0e0e0;
+        font-size: 12px;
+        font-weight: 300;
+        padding-left: $pad-xlg;
+        text-transform: uppercase;
+
+        &::after {
+          content: "+";
+          margin-left: $pad-xsm;
+          opacity: 0;
+          transition: 0.2s linear;
+        }
+
+        &:hover::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
